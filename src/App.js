@@ -9,19 +9,18 @@ class Counter extends Component {
   }
 
   render() {
-     return {
+     return (
       <div className = "container">
-      <div className = "navbar">
+      <div className = "navbar"></div>
       <div className = "counter">
       <h1> What do we put here??? :) </h1>
       <button type="button">Increment</button>
       <button type="button">Decrement</button>
       </div>
       </div>
+    )
     }
   }
-}
-
 
 
 export default Counter;
