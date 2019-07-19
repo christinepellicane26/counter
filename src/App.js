@@ -1,21 +1,33 @@
 import React, {Component} from 'react';
-
+import './App.css'
 class Counter extends Component {
-  constructor() {
+   constructor() { 
     super();
     this.state = {
       counter: 0,
     }
   }
 
+  Increment =()=>
+  this.setState({counter:this.state.counter+1})
+
+  Decrement =()=>
+  this.setState({counter:this.state.counter-1})
+
   render() {
      return (
+     
       <div className = "container">
-      <div className = "navbar"></div>
+      
+      
+      <div><h1>Counter</h1></div>
+      
       <div className = "counter">
-      <h1> What do we put here??? :) </h1>
-      <button type="button">Increment</button>
+      <div>{this.state.counter}</div>
+      <button type="button" {this.state.increment}>Increment</button>
       <button type="button">Decrement</button>
+      
+      
       </div>
       </div>
     )
@@ -23,4 +35,4 @@ class Counter extends Component {
   }
 
 
-export default Counter;
+export default Counter
