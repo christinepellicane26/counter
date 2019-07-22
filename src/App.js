@@ -2,21 +2,31 @@ import React, {Component} from 'react';
 import './App.css'
 class Counter extends Component {
    constructor() { 
-    super();
+    super()
     this.state = {
-      counter: 0,
+      counter: 0
     }
   }
+  
 
+  Reset =()=>
+  this.setState({counter:this.state.counter=0})
+  
   Increment =()=>
   this.setState({counter:this.state.counter+1})
 
   Decrement =()=>
   this.setState({counter:this.state.counter-1})
 
+  timesThree =()=>
+  this.setState({counter:this.state.counter*3})
+
+   
+
   render() {
+    
      return (
-     
+            
       <div className = "container">
       
       
@@ -24,8 +34,12 @@ class Counter extends Component {
       
       <div className = "counter">
       <div>{this.state.counter}</div>
-      <button type="button" {this.state.increment}>Increment</button>
-      <button type="button">Decrement</button>
+      
+
+      <button type="button" onClick={this.Reset}>Reset</button>
+      <button type="button" onClick={this.Increment}>Increment</button>
+      <button type="button" onClick={this.Decrement}>Decrement</button>
+      <button type="button" onClick={this.timesThree}>Times Three</button>
       
       
       </div>
