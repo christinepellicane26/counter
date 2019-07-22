@@ -1,8 +1,10 @@
 {
+  "homepage":"https://christinepellicane26.github.io/counter/",
   "name": "todolist",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "express": "^4.17.1",
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -30,6 +32,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "homepage": "https://christinepellicane26.github.io/counter/"
+  }
 }
