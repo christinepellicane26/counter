@@ -15,13 +15,18 @@ class Counter extends Component {
   Increment =()=>
   this.setState({counter:this.state.counter+1})
 
-  Decrement =()=>
-  this.setState({counter:this.state.counter-1})
+  Decrement =()=> {
+  // this.setState({counter:this.state.counter-1});
+  if(this.state.counter > 0) {
+    this.setState({
+      counter: this.state.counter -1,
+    })
+  }
+}
 
   timesThree =()=>
   this.setState({counter:this.state.counter*3})
 
-   
 
   render() {
     
@@ -47,6 +52,6 @@ class Counter extends Component {
     )
     }
   }
-
+  
 
 export default Counter
