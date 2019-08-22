@@ -24,9 +24,14 @@ class Counter extends Component {
   }
 }
 
-  timesThree =()=>
-  this.setState({counter:this.state.counter*3})
-
+  timesThree =()=> {
+  // this.setState({counter:this.state.counter*3})
+  if (this.state.counter < 1e19) {
+    this.setState({
+      counter: this.state.counter*3,
+    })
+  }
+  }
 
   render() {
     
